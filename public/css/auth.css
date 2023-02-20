@@ -1,0 +1,131 @@
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  background: #f6f6f6;
+  font-family: -apple-system, BlinkMacSystemFont, "Red Hat Display", "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.loginContainer {
+  position: relative;
+  padding: 2rem 1.5rem;
+  margin: 2rem;
+  width: 400px;
+  max-width: 400px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  /* border: 1px solid #dedede; */
+  box-shadow: 0 5px 20px rgba(222, 222, 222, 0.1),
+    0 15px rgba(222, 222, 222, 0.1), 0 3px 8px rgba(175, 169, 169, 0.2),
+    0 2px 2px rgba(222, 222, 222, 0.1);
+}
+
+.loginContainer .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2px;
+  font-size: 1rem;
+  color: #6e6e6e;
+}
+
+.loginContainer .logo img {
+  height: 2rem;
+}
+
+.loginContainer h1 {
+  font-size: 1.75rem;
+}
+
+/* .loginContainer::before {
+  position: absolute;
+  top: -5%;
+  left: 5%;
+  content: "";
+  width: 90%;
+  height: 50%;
+  background: #1fa2f1;
+  border-radius: 10px;
+  z-index: -1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ */
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 20px 0px;
+}
+
+.auth__form-input {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #dedede;
+  background: #f2f2f2;
+  font-size: 1rem;
+}
+
+.auth__form-submit {
+  background: black;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.auth__form-password {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth__form-password input {
+  padding-right: 30px;
+}
+
+.auth__form-password .show {
+  position: absolute;
+  font-size: 1rem;
+  top: 12px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.auth__form .errorMessage {
+  color: #a00909;
+  background: #ee8d8d;
+  border-radius: 2px;
+  padding: 5px;
+  border: 1px solid #a00909;
+}

@@ -1,0 +1,57 @@
+include ../mixins/mixins
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pageTitle} | Boxicle 
+        link(rel='stylesheet', href='/css/cropper.min.css')
+        link(rel="stylesheet", href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css")
+        link(rel="stylesheet" href="/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/css/main.css")
+    body
+        script.
+            let userLoggedIn = !{userLoggedInJs};
+        .wrapper
+            .row
+                button.menu-toggle 
+                    i.bx.bx-menu.menu-icon  
+                nav.col-2.menu#navMenu        
+                    a.blue(href="/")
+                        img(src="/images/boxicle.svg", alt="", srcset="")
+                    a(href="/") 
+                        i.bx.bx-home-alt
+                    a(href="/search") 
+                        i.bx.bx-search-alt
+                    a(href="/notifications") 
+                        i.bx.bx-bell
+                        span#notificationBadge
+                    a(href="/messages") 
+                        i.bx.bx-envelope
+                        span#messagesBadge
+                    a(href="/profile") 
+                        i.bx.bx-user
+                    a(href="/logout") 
+                        i.bx.bx-log-out
+                .mainSectionContainer.col-10.col-md-8.col-lg-10
+                    .titleContainer
+                        h1 #{pageTitle}
+                        block headerButton
+
+                    block content
+
+                .d-none.d-md-block.col-md-2.col-lg-4
+        #notificationList
+
+        script(src="/js/jquery-3.6.0.min.js") 
+        script(src="/js/popper.min.js") 
+        script(src="/js/bootstrap.min.js")
+        script(src='/js/cropper.min.js')
+        script(src='/js/socket.io.min.js')
+
+        block scripts
+
+        script(src="/js/common.js")
+        script(src="/js/clientSocket.js")
+

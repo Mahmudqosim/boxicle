@@ -1,0 +1,19 @@
+extends layouts/auth-layout.pug
+
+block content
+    .loginContainer
+        div.logo
+            img(src="/images/boxicle-full.svg", alt="Boxicle Logo")
+            span Login to Boxicle
+        form.auth__form(method="post") 
+
+            if errorMessage 
+                p.errorMessage #{errorMessage}
+
+            input.auth__form-input(type="text" name="username" placeholder="Username or email" value=username required="")
+            div.auth__form-password
+                input.auth__form-input(type="password" name="password" placeholder="Password" required="")
+                i.bx.bx-show.show
+            button.auth__form-submit(type="submit") Login
+        span Not yet registered? 
+            a(href="/register") Register

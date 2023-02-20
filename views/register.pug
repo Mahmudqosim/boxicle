@@ -1,0 +1,24 @@
+extends layouts/auth-layout.pug
+
+block content
+    .loginContainer
+        div.logo
+            img(src="/images/boxicle-full.svg", alt="Boxicle Logo")
+            span Join Boxicle
+        form.auth__form(method="post") 
+
+            if errorMessage 
+                p.errorMessage #{errorMessage}
+
+            input.auth__form-input(type="text" name="firstName" placeholder="First name", value=firstName required="")
+            input.auth__form-input(type="text" name="lastName" placeholder="Last name", value=lastName required="")
+            input.auth__form-input(type="text" name="username" placeholder="Username", value=username required="")
+            input.auth__form-input(type="email" name="email" placeholder="Email", value=email required="")
+            div.auth__form-password
+                input.auth__form-input(type="password" name="password" placeholder="Password" required="")
+                i.bx.bx-show.show
+            button.auth__form-submit(type="submit") Register
+        span Already registered? 
+            a(href="/login") Login
+    
+    
